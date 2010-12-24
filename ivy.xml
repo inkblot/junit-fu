@@ -2,7 +2,7 @@
 <ivy-module version="2.0"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
-    <info organisation="org.movealong" module="junit-fu" revision="0.0.1"/>
+    <info organisation="org.movealong" module="junit-fu" revision="1.0.0"/>
 
     <configurations>
         <conf name="default" extends="runtime" description="Distributed artifacts"/>
@@ -23,10 +23,11 @@
     </publications>
 
     <dependencies>
-        <dependency org="junit" name="junit" rev="4.8.1" conf="runtime->default"/>
-        <dependency org="org.jmock" name="jmock" rev="2.5.1" conf="runtime->default"/>
-        <dependency org="org.jmock" name="jmock-junit4" rev="2.5.1" conf="runtime->default"/>
-        <dependency org="com.google.inject" name="guice" rev="2.0" conf="runtime->default"/>
+        <dependency org="junit" name="junit" rev="4.8.1" conf="runtime->default;sources->sources"/>
+        <dependency org="org.jmock" name="jmock" rev="2.5.1" conf="runtime->default;sources->sources"/>
+        <dependency org="org.jmock" name="jmock-junit4" rev="2.5.1" conf="runtime->default;sources->sources"/>
+        <dependency org="com.google.inject" name="guice" rev="2.0" conf="runtime->default;sources->sources"/>
+        <dependency org="commons-lang" name="commons-lang" rev="2.5" conf="runtime->default;sources->sources"/>
 
         <dependency org="org.slf4j" name="slf4j-api" rev="1.6.1" conf="test->default"/>
         <dependency org="org.slf4j" name="slf4j-log4j12" rev="1.6.1" conf="test->default"/>
